@@ -10,6 +10,8 @@ script:
 jobs:
   include:
     - stage: Deploy
+      if:
+        tags: true
       before_deploy:
         - npm run build:prod
         - npx compile-release
@@ -19,14 +21,17 @@ jobs:
           fqdn: $PKG_NAME.jaid.codes
           skip_cleanup: true
           github_token: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
-          on: { condition: -d pages }
+          on:
+            condition: -d dist/page AND env(GITHUB_TOKEN) IS present
         - provider: releases
           file_glob: true
           file: dist/github/*
           skip_cleanup: true
           api_key: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
-          on: { tags: true }
+          on:
+            condition: env(GITHUB_TOKEN) IS present
         - provider: script
           script: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && npm publish dist/package/production
           skip_cleanup: true
-          on: { tags: true }
+          on:
+            condition: env(NPM_TOKEN) IS present
