@@ -3,30 +3,26 @@ node_js: [node, lts/*]
 cache:
   npm: true
 script:
-  - npx pover install
-  - npx pover build:dev
-  - npx pover build:prod
-  - npx pover test
+  - curl https://gist.githubusercontent.com/Jaid/284917bd3e938add97b699a18b957d8c/raw/ciNode.bash | bash
 jobs:
   include:
     - stage: Deploy
       if: tag =~ /^v/
       before_deploy:
-        - npm run build:prod
-        - npx compile-release
+        - curl https://gist.githubusercontent.com/Jaid/284917bd3e938add97b699a18b957d8c/raw/ciNodeRelease.bash | bash
       deploy:
         - provider: pages
           local_dir: page
           fqdn: $PKG_NAME.jaid.codes
           skip_cleanup: true
-          github_token: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
+          github_token: $GITHUB_TOKEN
           on:
             condition: -d dist/page AND env(GITHUB_TOKEN) IS present
         - provider: releases
           file_glob: true
           file: dist/github/*
           skip_cleanup: true
-          api_key: $GITHUB_TOKEN # Permissions: public_repo, repo:status, repo_deployment
+          api_key: $GITHUB_TOKEN
           on:
             condition: env(GITHUB_TOKEN) IS present
         - provider: script
