@@ -10,8 +10,7 @@ script:
 jobs:
   include:
     - stage: Deploy
-      if:
-        tags: true
+      if: (tag =~ ^v) AND (branch = master)
       before_deploy:
         - npm run build:prod
         - npx compile-release
