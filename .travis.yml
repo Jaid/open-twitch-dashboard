@@ -9,26 +9,25 @@ jobs:
     - stage: Deploy
       if: tag IS present
       node_js: node
-      before_deploy:
-        - echo JOB
+      script:
         - curl https://gist.githubusercontent.com/Jaid/284917bd3e938add97b699a18b957d8c/raw/ciNodeRelease.bash | bash
-      # deploy:
-      #   - provider: pages
-      #     local_dir: dist/page
-      #     fqdn: $PKG_NAME.jaid.codes
-      #     skip_cleanup: true
-      #     github_token: $GITHUB_TOKEN
-      #     on:
-      #       condition: "! -z $DEPLOY_PAGE"
-      #   - provider: releases
-      #     file_glob: true
-      #     file: dist/github/*
-      #     skip_cleanup: true
-      #     api_key: $GITHUB_TOKEN
-      #     on:
-      #       condition: "! -z $DEPLOY_RELEASES"
-      #   - provider: script
-      #     script: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && npm publish dist/package/production
-      #     skip_cleanup: true
-      #     on:
-      #       condition: "! -z $DEPLOY_NPM"
+      deploy:
+        - provider: pages
+          local_dir: dist/page
+          fqdn: $PKG_NAME.jaid.codes
+          skip_cleanup: true
+          github_token: $GITHUB_TOKEN
+          on:
+            condition: "! -z $DEPLOY_PAGE"
+        - provider: releases
+          file_glob: true
+          file: dist/github/*
+          skip_cleanup: true
+          api_key: $GITHUB_TOKEN
+          on:
+            condition: "! -z $DEPLOY_RELEASES"
+        - provider: script
+          script: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && npm publish dist/package/production
+          skip_cleanup: true
+          on:
+            condition: "! -z $DEPLOY_NPM"
