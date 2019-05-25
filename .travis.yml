@@ -9,7 +9,6 @@ jobs:
       node_js: node
       script:
         - curl https://gist.githubusercontent.com/Jaid/284917bd3e938add97b699a18b957d8c/raw/ciNodeRelease.bash | bash
-        - echo $DEPLOY_RELEASES
       deploy:
         - provider: pages
           local_dir: dist/page
@@ -18,7 +17,7 @@ jobs:
           github_token: $GITHUB_TOKEN
           on:
             tags: true
-            condition: "! -f ~/deployPage"
+            condition: "-f ~/deployPage"
         - provider: releases
           file_glob: true
           file: dist/github/*
@@ -26,10 +25,10 @@ jobs:
           api_key: $GITHUB_TOKEN
           on:
             tags: true
-            condition: "! -f ~/deployReleases"
+            condition: "-f ~/deployReleases"
         - provider: script
           script: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && npm publish dist/package/production
           skip_cleanup: true
           on:
             tags: true
-            condition: "! -f ~/deployNpm"
+            condition: "-f ~/deployNpm"
