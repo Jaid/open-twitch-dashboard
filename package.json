@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "1.0.15",
+  "version": "1.0.16",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
     "@babel/runtime": "^7.4.5",
