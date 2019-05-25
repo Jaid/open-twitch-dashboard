@@ -7,7 +7,6 @@ script:
 jobs:
   include:
     - stage: Deploy
-      if: tag =~ /^v/
       before_deploy:
         - curl https://gist.githubusercontent.com/Jaid/284917bd3e938add97b699a18b957d8c/raw/ciNodeRelease.bash | bash
       deploy:
