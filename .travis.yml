@@ -3,14 +3,16 @@ node_js: [node, lts/*]
 cache:
   npm: true
 script:
-  - curl https://gist.githubusercontent.com/Jaid/284917bd3e938add97b699a18b957d8c/raw/ciNode.bash | bash
+  - curl https://gist.githubusercontent.com/Jaid/284917bd3e938add97b699a18b957d8c/raw/ciNode.bash > ~/script
+  - bash ~/script
 jobs:
   include:
     - stage: Deploy
       if: tag IS present
       node_js: node
       script:
-        - curl https://gist.githubusercontent.com/Jaid/284917bd3e938add97b699a18b957d8c/raw/ciNodeRelease.bash | bash
+        - curl https://gist.githubusercontent.com/Jaid/284917bd3e938add97b699a18b957d8c/raw/ciNodeRelease.bash > ~/script
+        - bash ~/script
       deploy:
         - provider: pages
           local_dir: dist/page
