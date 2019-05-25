@@ -17,16 +17,16 @@ jobs:
           skip_cleanup: true
           github_token: $GITHUB_TOKEN
           on:
-            condition: (-d dist/page) AND (env(GITHUB_TOKEN) IS present)
+            condition: env(DEPLOY_PAGE) IS present
         - provider: releases
           file_glob: true
           file: dist/github/*
           skip_cleanup: true
           api_key: $GITHUB_TOKEN
           on:
-            condition: env(GITHUB_TOKEN) IS present
+            condition: env(DEPLOY_RELEASES) IS present
         - provider: script
           script: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && npm publish dist/package/production
           skip_cleanup: true
           on:
-            condition: env(NPM_TOKEN) IS present
+            condition: env(DEPLOY_NPM) IS present
