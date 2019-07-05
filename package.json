@@ -7,7 +7,7 @@
     "@babel/runtime": "^7.5.0",
     "@rexlabs/npm-hook-receiver": "^1.0.0",
     "debug": "^4.1.1",
-    "execa": "^2.0.2",
+    "execa": "^2.0.3",
     "fast-decode-uri-component": "^1.0.1",
     "filesize": "^4.1.2",
     "google-auth-library": "^4.2.5",
@@ -39,7 +39,7 @@
     "eslint-config-jaid": "^1.18.0",
     "jest": "^24.8.0",
     "rimraf": "^2.6.3",
-    "webpack-config-jaid": "^5.20.0"
+    "webpack-config-jaid": "^5.20.2"
   },
   "scripts": {
     "clean": "rimraf dist/",
