@@ -5,7 +5,9 @@
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
     "@babel/runtime": "^7.5.0",
-    "open": "^6.4.0"
+    "execa": "^2.0.3",
+    "open": "^6.4.0",
+    "yargs": "^13.2.4"
   },
   "devDependencies": {
     "acorn": "^6.2.0",
