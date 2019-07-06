@@ -4,14 +4,15 @@ import execa from "execa"
 
 const url = "https://twitch.tv/dashboard"
 
-const job = ({kiosk}) => {
+const job = async ({kiosk}) => {
   if (kiosk) {
-    execa("chrome", ["--app", url], {
+    await execa("chrome", ["--app", url], {
       cleanup: false,
     })
   } else {
-    open(url)
+    await open(url)
   }
+  process.exit(0)
 }
 
 const builder = {
