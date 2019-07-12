@@ -4,7 +4,7 @@
   "version": "2.1.1",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
-    "@babel/runtime": "^7.5.2",
+    "@babel/runtime": "^7.5.4",
     "execa": "^2.0.3",
     "open": "^6.4.0",
     "yargs": "^13.2.4"
@@ -13,12 +13,12 @@
     "acorn": "^6.2.0",
     "ajv": "^6.10.1",
     "babel-jest": "^24.8.0",
-    "babel-preset-jaid": "^6.8.1",
+    "babel-preset-jaid": "^6.8.2",
     "browserslist-config-jaid-node": "^2.2.1",
-    "caniuse-lite": "^1.0.30000981",
+    "caniuse-lite": "^1.0.30000983",
     "coffee": "^5.2.1",
     "eslint": "^6.0.1",
-    "eslint-config-jaid": "^1.18.0",
+    "eslint-config-jaid": "^1.19.0",
     "jest": "^24.8.0",
     "rimraf": "^2.6.3",
     "webpack-config-jaid": "^5.22.0"
