@@ -29,6 +29,12 @@ const builder = {
     type: "string",
     description: "Path to the Chrome user data directory",
   },
+  "chrome-path": {
+    type: "string",
+    default: "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe" |> path.resolve,
+    description: "Path to Chrome binary",
+  },
+  url: {
 }
 
 yargs
