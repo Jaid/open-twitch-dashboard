@@ -11,7 +11,7 @@ const job = async ({kiosk, userDataDir}) => {
       parameters.push("--user-data-dir", userDataDir)
     }
     await execa("chrome", parameters, {
-      cleanup: false,
+      detached: true,
     })
   } else {
     await open(url)
