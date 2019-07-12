@@ -35,6 +35,10 @@ const builder = {
     description: "Path to Chrome binary",
   },
   url: {
+    type: "string",
+    default: "https://twitch.tv/dashboard",
+    description: "URL to open",
+  },
 }
 
 yargs
