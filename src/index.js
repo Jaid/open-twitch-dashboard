@@ -4,9 +4,13 @@ import execa from "execa"
 
 const url = "https://twitch.tv/dashboard"
 
-const job = async ({kiosk}) => {
+const job = async ({kiosk, userDataDir}) => {
   if (kiosk) {
-    await execa("chrome", ["--app", url], {
+    const parameters = ["--app", url]
+    if (userDataDir) {
+      parameters.push("--user-data-dir", userDataDir)
+    }
+    await execa("chrome", parameters, {
       cleanup: false,
     })
   } else {
@@ -20,6 +24,10 @@ const builder = {
     type: "boolean",
     default: false,
     description: "Opens Chrome in kiosk mode",
+  },
+  "user-data-dir": {
+    type: "string",
+    description: "Path to the Chrome user data directory",
   },
 }
 
