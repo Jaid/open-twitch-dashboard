@@ -1,22 +1,21 @@
-import open from "open"
+import path from "path"
+
 import yargs from "yargs"
 import execa from "execa"
 
-const url = "https://twitch.tv/dashboard"
-
-const job = async ({kiosk, userDataDir}) => {
-  if (kiosk) {
-    const parameters = ["--app", url]
-    if (userDataDir) {
-      parameters.push("--user-data-dir", userDataDir)
-    }
-    await execa("chrome", parameters, {
-      detached: true,
-    })
-  } else {
-    await open(url)
+const job = ({kiosk, userDataDir, chromePath, url}) => {
+  const parameters = []
+  if (userDataDir) {
+    parameters.push("--user-data-dir", userDataDir)
   }
-  process.exit(0)
+  if (kiosk) {
+    parameters.push("--chrome-frame", "--disable-features=TranslahteUI", `--app=${url}`)
+  } else {
+    parameters.push(url)
+  }
+  execa.sync(chromePath, parameters, {
+    detached: true,
+  })
 }
 
 const builder = {

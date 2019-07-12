@@ -6,7 +6,6 @@
   "dependencies": {
     "@babel/runtime": "^7.5.4",
     "execa": "^2.0.3",
-    "open": "^6.4.0",
     "yargs": "^13.2.4"
   },
   "devDependencies": {
