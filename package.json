@@ -4,23 +4,23 @@
   "version": "3.0.0",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
-    "@babel/runtime": "^7.5.4",
+    "@babel/runtime": "^7.5.5",
     "execa": "^2.0.3",
-    "yargs": "^13.2.4"
+    "yargs": "^13.3.0"
   },
   "devDependencies": {
-    "acorn": "^6.2.0",
-    "ajv": "^6.10.1",
+    "acorn": "^6.2.1",
+    "ajv": "^6.10.2",
     "babel-jest": "^24.8.0",
     "babel-preset-jaid": "^6.8.2",
     "browserslist-config-jaid-node": "^2.2.1",
-    "caniuse-lite": "^1.0.30000983",
-    "coffee": "^5.2.1",
-    "eslint": "^6.0.1",
-    "eslint-config-jaid": "^1.19.0",
+    "caniuse-lite": "^1.0.30000988",
+    "coffee": "^5.2.2",
+    "eslint": "^6.1.0",
+    "eslint-config-jaid": "^1.28.0",
     "jest": "^24.8.0",
     "rimraf": "^2.6.3",
-    "webpack-config-jaid": "^5.22.0"
+    "webpack-config-jaid": "^5.23.0"
   },
   "scripts": {
     "clean": "rimraf dist/",
