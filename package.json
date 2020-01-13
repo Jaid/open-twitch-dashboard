@@ -36,5 +36,9 @@
   },
   "name": "open-twitch-dashboard",
   "description": "CLI tool that opens the Twitch streamer dashboard in the default browser. It's that simple.",
-  "funding": "https://github.com/sponsors/jaid"
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/open-twitch-dashboard"
+  }
 }
