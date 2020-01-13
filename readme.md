@@ -1,9 +1,9 @@
 # open-twitch-dashboard
 
 
-<a href="https://raw.githubusercontent.com/Jaid/open-twitch-dashboard/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/open-twitch-dashboard?style=flat-square" alt="License"/></a>  
-<a href="https://actions-badge.atrox.dev/Jaid/open-twitch-dashboard/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fopen-twitch-dashboard%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/open-twitch-dashboard/commits"><img src="https://img.shields.io/github/commits-since/Jaid/open-twitch-dashboard/v3.0.0?style=flat-square&logo=github" alt="Commits since v3.0.0"/></a> <a href="https://github.com/Jaid/open-twitch-dashboard/commits"><img src="https://img.shields.io/github/last-commit/Jaid/open-twitch-dashboard?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/open-twitch-dashboard/issues"><img src="https://img.shields.io/github/issues/Jaid/open-twitch-dashboard?style=flat-square&logo=github" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/open-twitch-dashboard"><img src="https://img.shields.io/npm/v/open-twitch-dashboard?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/open-twitch-dashboard/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/open-twitch-dashboard?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/open-twitch-dashboard"><img src="https://img.shields.io/npm/dm/open-twitch-dashboard?style=flat-square&logo=npm" alt="Downloads"/></a>
+<a href="https://raw.githubusercontent.com/jaid/open-twitch-dashboard/master/license.txt"><img src="https://img.shields.io/github/license/jaid/open-twitch-dashboard?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor open-twitch-dashboard"/></a>
+<a href="https://actions-badge.atrox.dev/jaid/open-twitch-dashboard/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Fopen-twitch-dashboard%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/open-twitch-dashboard/commits"><img src="https://img.shields.io/github/commits-since/jaid/open-twitch-dashboard/v3.0.0?style=flat-square&logo=github" alt="Commits since v3.0.0"/></a> <a href="https://github.com/jaid/open-twitch-dashboard/commits"><img src="https://img.shields.io/github/last-commit/jaid/open-twitch-dashboard?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/open-twitch-dashboard/issues"><img src="https://img.shields.io/github/issues/jaid/open-twitch-dashboard?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/open-twitch-dashboard"><img src="https://img.shields.io/npm/v/open-twitch-dashboard?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/open-twitch-dashboard/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/open-twitch-dashboard?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/open-twitch-dashboard"><img src="https://img.shields.io/npm/dm/open-twitch-dashboard?style=flat-square&logo=npm" alt="Downloads"/></a>
 
 **CLI tool that opens the Twitch streamer dashboard in the default browser. It's that simple.**
 
@@ -33,7 +33,6 @@ yarn global add open-twitch-dashboard@^3.0.0
 
 
 
-
 ## CLI Usage
 After installing package `open-twitch-dashboard` globally, you can use its command line interface.
 ```bash
@@ -53,7 +52,7 @@ open-twitch-dashboard --help
 
 Setting up:
 ```bash
-git clone git@github.com:Jaid/open-twitch-dashboard.git
+git clone git@github.com:jaid/open-twitch-dashboard.git
 cd open-twitch-dashboard
 npm install
 ```
